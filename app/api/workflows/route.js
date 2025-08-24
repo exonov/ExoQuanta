@@ -1,5 +1,8 @@
 import { NextResponse } from 'next/server';
 
+// Configuration pour l'export statique
+export const dynamic = "force-static";
+
 // Configuration n8n (à mettre dans les variables d'environnement)
 const N8N_BASE_URL = process.env.N8N_BASE_URL || 'http://localhost:5678';
 const N8N_API_KEY = process.env.N8N_API_KEY || '';
@@ -43,7 +46,7 @@ export async function GET() {
         const mockWorkflows = [
             {
                 id: 'quantum-health-check',
-                name: '🔬 Quantum | 01 - Health Check',
+                name: 'Quantum | 01 - Health Check',
                 active: true,
                 lastUpdated: '13/08/2025',
                 nodeCount: 5,
@@ -51,7 +54,7 @@ export async function GET() {
             },
             {
                 id: 'quantum-credits-probe',
-                name: '🔬 Quantum | 02 - Credits Probe',
+                name: 'Quantum | 02 - Credits Probe',
                 active: true,
                 lastUpdated: '13/08/2025',
                 nodeCount: 3,
@@ -59,7 +62,7 @@ export async function GET() {
             },
             {
                 id: 'quantum-router',
-                name: '🔬 Quantum | 03 - Router',
+                name: 'Quantum | 03 - Router',
                 active: true,
                 lastUpdated: '13/08/2025',
                 nodeCount: 8,
@@ -67,7 +70,7 @@ export async function GET() {
             },
             {
                 id: 'quantum-portfolio-qaoa',
-                name: '🔬 Quantum | 05 - Portfolio QAOA',
+                name: 'Quantum | 05 - Portfolio QAOA',
                 active: true,
                 lastUpdated: '11/08/2025',
                 nodeCount: 12,
@@ -75,7 +78,7 @@ export async function GET() {
             },
             {
                 id: 'quantum-arbitrage',
-                name: '🔬 Quantum | 06 - Arbitrage Commodities',
+                name: 'Quantum | 06 - Arbitrage Commodities',
                 active: true,
                 lastUpdated: '11/08/2025',
                 nodeCount: 15,
@@ -83,7 +86,7 @@ export async function GET() {
             },
             {
                 id: 'github-file-creator',
-                name: '🔧 GitHub File Creator - Quantum Integration',
+                name: 'GitHub File Creator - Quantum Integration',
                 active: false,
                 lastUpdated: '12/08/2025',
                 nodeCount: 6,
