@@ -1,5 +1,8 @@
 import { NextResponse } from 'next/server';
 
+// Configuration pour l'export statique
+export const dynamic = "force-static";
+
 // Configuration n8n
 const N8N_BASE_URL = process.env.N8N_BASE_URL || 'http://localhost:5678';
 const N8N_API_KEY = process.env.N8N_API_KEY || '';
@@ -85,21 +88,21 @@ export async function GET() {
         const mockExecutions = [
             {
                 id: '1',
-                workflowName: '🔬 Quantum | 01 - Health Check',
+                workflowName: 'Quantum | 01 - Health Check',
                 status: 'error',
                 startedAt: new Date(Date.now() - 3600000).toISOString(),
                 duration: '0.05s'
             },
             {
                 id: '2',
-                workflowName: '📧 Email Risk Report',
+                workflowName: 'Email Risk Report',
                 status: 'error',
                 startedAt: new Date(Date.now() - 7200000).toISOString(),
                 duration: '0.02s'
             },
             {
                 id: '3',
-                workflowName: '🔬 Quantum | 02 - Credits Probe',
+                workflowName: 'Quantum | 02 - Credits Probe',
                 status: 'error',
                 startedAt: new Date(Date.now() - 10800000).toISOString(),
                 duration: '0.03s'
