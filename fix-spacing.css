@@ -1,0 +1,27 @@
+/* CORRECTION DIRECTE ESPACEMENT EXOQUANTA */
+@import 'tailwindcss';
+
+/* Force l'espacement approprié */
+section {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+}
+
+.container, [class*="max-w"] {
+    padding-left: 48px !important;
+    padding-right: 48px !important;
+}
+
+.grid {
+    gap: 40px !important;
+}
+
+/* Force padding des cartes */
+[class*="bg-black/"] {
+    padding: 40px !important;
+}
+
+/* Marges titres */
+h1, h2, h3 {
+    margin-bottom: 32px !important;
+}
