@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import '../fix-spacing.css';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 
 const inter = Inter({
